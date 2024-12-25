@@ -1,8 +1,9 @@
 window.onload = function () {
   const music = document.getElementById("backgroundMusic");
+  const playButton = document.getElementById("playButton");
 
-  if (!music) {
-    console.log("Audio element not found!");
+  if (!music || !playButton) {
+    console.log("Audio or button element not found!");
     return;
   }
 
@@ -18,15 +19,17 @@ window.onload = function () {
       "Current time after setting to 30 seconds: " + music.currentTime
     );
 
-    // Unmute the audio and play it
-    music.muted = false;
-    music
-      .play()
-      .then(() => {
-        console.log("Audio started playing");
-      })
-      .catch((error) => {
-        console.error("Error playing audio:", error);
-      });
+    // Play the audio when the button is clicked
+    playButton.addEventListener("click", function () {
+      music
+        .play()
+        .then(() => {
+          console.log("Audio started playing");
+          playButton.style.display = "none"; // Hide the play button after the audio starts
+        })
+        .catch((error) => {
+          console.error("Error playing audio:", error);
+        });
+    });
   });
 };
