@@ -452,7 +452,7 @@ body {
 #playButton {
   display: block;
   margin: 20px auto 0; /* Center the button and add margin from the top */
-  background-color: #ff7b00;
+  background-color: #b45609;
   color: #fff;
   font-size: 16px;
   padding: 10px 20px;
@@ -464,7 +464,7 @@ body {
 }
 
 #playButton:hover {
-  background-color: #ff9900; /* Darker shade when hovering */
+  background-color: #a15c0cbb; /* Darker shade when hovering */
 }
 @keyframes snow {
   0% {
