@@ -1,7 +1,10 @@
 window.onload = function () {
   const music = document.getElementById("backgroundMusic");
 
-  // Start playing at 30 seconds into the song
-  music.currentTime = 59; // Set the time (in seconds) where you want the song to start
-  music.play(); // Play the song automatically
+  // Wait for the audio to load
+  music.oncanplaythrough = function () {
+    music.currentTime = 59; // Start the song at 59 seconds
+    music.muted = false; // Unmute the audio
+    music.play(); // Play the song automatically
+  };
 };
