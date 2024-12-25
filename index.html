@@ -102,16 +102,17 @@
     <p class="blessing">
       Have a good time with your family and I love you so much!
     </p>
-    <!-- Audio element with the 'muted' attribute to bypass autoplay restrictions -->
-    <audio id="myAudio" preload="auto" muted>
-      <source src="Siberian.mp3" type="audio/mp3" />
-      <source src="your-audio-file.ogg" type="audio/ogg" />
-    </audio>
+    <button id="playButton">Play Music</button>
+    <style>
+      .music {
+        text-align: center; /* Center the player */
+        margin: 20px;
+      }
 
-    <!-- Play button -->
-    <button id="playButton" class="play-button" onclick="playMusic()">
-      Play Music
-    </button>
+      audio {
+        width: 300px; /* Set the width of the audio player */
+      }
+    </style>
     <div class="music">
       <audio id="backgroundMusic" autoplay>
         <source src="Siberian.mp3" type="audio/mpeg" />
