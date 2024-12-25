@@ -447,16 +447,17 @@ body {
 
 #playButton {
   display: inline-block;
-  background-color: #ffcc00; /* Gold button color */
-  color: #fff; /* White text */
+  background-color: #ffcc00;
+  color: #fff;
   font-size: 16px;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 20px; /* Add space between the blessing and the button */
-  font-family: "Dancing Script", cursive; /* Matching font to "blessing" */
-  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.6); /* Soft shadow effect */
+  margin-top: 20px;
+  font-family: "Dancing Script", cursive;
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.6);
+  visibility: visible; /* Ensure the button is visible */
 }
 
 #playButton:hover {
