@@ -6,19 +6,20 @@ window.onload = function () {
     return;
   }
 
-  // Wait for the audio to be fully loaded and ready to play
+  // Wait for the audio to be fully loaded
   music.addEventListener("loadeddata", function () {
     console.log(
       "Audio loaded. Current time before playing: " + music.currentTime
-    ); // Log before setting currentTime
+    );
 
     // Set the audio to start at 30 seconds
-    music.currentTime = 59;
+    music.currentTime = 30;
     console.log(
       "Current time after setting to 30 seconds: " + music.currentTime
-    ); // Log after setting currentTime
+    );
 
-    // Check if autoplay is blocked, and play only when the user can interact
+    // Unmute the audio and play it
+    music.muted = false;
     music
       .play()
       .then(() => {
