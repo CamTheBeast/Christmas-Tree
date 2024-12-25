@@ -438,30 +438,12 @@ body {
   margin-top: -2%;
   animation: snow 4s 1s linear infinite backwards;
 }
-
-.playMusicButton {
+.music {
   position: absolute;
-  bottom: 80px; /* Move it below the blessing text */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%);
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #ff6347; /* Tomato color */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  z-index: 1000; /* Ensure the button is above other elements */
+  opacity: 0.3;
+  bottom: 0;
+  right: 0;
 }
-
-.playMusicButton:hover {
-  background-color: #ff4500; /* Darker tomato color on hover */
-}
-
-audio {
-  width: 300px; /* Adjust the width of the audio player */
-}
-
 @keyframes snow {
   0% {
     transform: translateY(0);
