@@ -1,35 +1,14 @@
-window.onload = function () {
-  const music = document.getElementById("backgroundMusic");
-  const playButton = document.getElementById("playButton");
+// Play music function with unmuting and error handling
+function playMusic() {
+  var audio = document.getElementById("myAudio");
 
-  if (!music || !playButton) {
-    console.log("Audio or button element not found!");
-    return;
-  }
-
-  // Wait for the audio to be fully loaded
-  music.addEventListener("loadeddata", function () {
-    console.log(
-      "Audio loaded. Current time before playing: " + music.currentTime
-    );
-
-    // Set the audio to start at 30 seconds
-    music.currentTime = 30;
-    console.log(
-      "Current time after setting to 30 seconds: " + music.currentTime
-    );
-
-    // Play the audio when the button is clicked
-    playButton.addEventListener("click", function () {
-      music
-        .play()
-        .then(() => {
-          console.log("Audio started playing");
-          playButton.style.display = "none"; // Hide the play button after the audio starts
-        })
-        .catch((error) => {
-          console.error("Error playing audio:", error);
-        });
+  // Check if audio is already playing
+  if (audio.paused) {
+    // Unmute and play the audio
+    audio.muted = false;
+    audio.play().catch(function (error) {
+      console.log("Audio play failed: ", error);
+      // Optional: Show a message to the user about the error
     });
-  });
-};
+  }
+}
