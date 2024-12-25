@@ -439,7 +439,11 @@ body {
   animation: snow 4s 1s linear infinite backwards;
 }
 .music {
-  display: none; /* Hide the audio element */
+  position: absolute;
+  opacity: 0.1; /* Adjust opacity to your preference */
+  bottom: 0;
+  right: 0;
+  z-index: 1000; /* Make sure the player is above other elements */
 }
 
 audio {
