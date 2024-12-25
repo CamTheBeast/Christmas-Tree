@@ -13,7 +13,7 @@
     <script src="./index.js"></script>
   </head>
   <body>
-    <!-- 雪花 -->
+    <!-- Snowflakes -->
     <div class="snow">
       <div></div>
       <div></div>
@@ -28,76 +28,7 @@
     </div>
     <p class="word">Merry Christmas Yuko!</p>
     <div class="tree">
-      <div class="star">
-        <div class="star-in"></div>
-      </div>
-      <!-- 树叶 -->
-      <div class="leaf-box">
-        <div class="leaf">
-          <div class="edge"></div>
-          <div class="edge right"></div>
-        </div>
-        <div class="leaf">
-          <div class="edge"></div>
-          <div class="edge right"></div>
-        </div>
-        <div class="leaf">
-          <div class="edge"></div>
-          <div class="edge right"></div>
-        </div>
-        <div class="leaf">
-          <div class="edge"></div>
-          <div class="edge right"></div>
-        </div>
-        <div class="leaf">
-          <div class="edge"></div>
-          <div class="edge right"></div>
-        </div>
-      </div>
-      <!-- 树干 -->
-      <div class="trunk"></div>
-      <!-- 彩色的球 -->
-      <div class="ball-box">
-        <div class="ball b1"></div>
-        <div class="ball b2"></div>
-        <div class="ball b3"></div>
-        <div class="ball b4"></div>
-        <div class="ball b5"></div>
-        <div class="ball b6"></div>
-        <div class="ball b7"></div>
-        <div class="ball b8"></div>
-        <div class="ball b9"></div>
-      </div>
-      <!-- 闪烁 -->
-      <div class="sparkle">
-        <span>
-          <i class="iconfont">&#xe653;</i>
-        </span>
-        <span>
-          <i class="iconfont">&#xe653;</i>
-        </span>
-        <span>
-          <i class="iconfont" style="font-size: 15px">&#xe653;</i>
-        </span>
-        <span>
-          <i class="iconfont" style="font-size: 12px">&#xe653;</i>
-        </span>
-        <span>
-          <i class="iconfont" style="font-size: 14px">&#xe653;</i>
-        </span>
-        <span>
-          <i class="iconfont" style="font-size: 14px">&#xe653;</i>
-        </span>
-      </div>
-      <!-- 球形闪光 -->
-      <div class="blink">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+      <!-- Christmas Tree Elements -->
     </div>
     <p class="blessing">
       Have a good time with your family and I love you so much!
@@ -106,6 +37,7 @@
     <!-- Play Music Button -->
     <button id="playMusicButton">Play Music</button>
 
+    <!-- Hidden Audio Element -->
     <div class="music">
       <audio id="backgroundMusic" preload="auto">
         <source src="Siberian.mp3" type="audio/mpeg" />
@@ -120,7 +52,17 @@
         // Set the audio to start at 30 seconds without playing yet
         music.currentTime = 30;
 
-        // When the user clicks the Play button, start playing the audio
+        // Automatically play the music when the page loads
+        music
+          .play()
+          .then(() => {
+            console.log("Audio started playing from 30 seconds");
+          })
+          .catch((error) => {
+            console.error("Error playing audio:", error);
+          });
+
+        // When the user clicks the Play button, resume playing the audio
         playButton.addEventListener("click", function () {
           music
             .play()
