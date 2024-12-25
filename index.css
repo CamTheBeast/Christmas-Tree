@@ -445,19 +445,22 @@ body {
   right: 0;
 }
 
+body {
+  text-align: center; /* Center content horizontally */
+}
+
 #playButton {
-  display: inline-block;
-  background-color: #ffcc00;
+  display: block;
+  margin: 20px auto 0; /* Center the button and add margin from the top */
+  background-color: #ff7b00;
   color: #fff;
   font-size: 16px;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 20px;
   font-family: "Dancing Script", cursive;
   text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.6);
-  visibility: visible; /* Ensure the button is visible */
 }
 
 #playButton:hover {
