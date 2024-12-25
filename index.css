@@ -441,6 +441,7 @@ body {
 .music {
   display: none; /* Completely hide the audio element */
 }
+
 @keyframes snow {
   0% {
     transform: translateY(0);
