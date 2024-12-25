@@ -14,7 +14,7 @@ window.onload = function () {
     );
 
     // Set the audio to start at 30 seconds
-    music.currentTime = 59;
+    music.currentTime = 30;
     console.log(
       "Current time after setting to 30 seconds: " + music.currentTime
     );
